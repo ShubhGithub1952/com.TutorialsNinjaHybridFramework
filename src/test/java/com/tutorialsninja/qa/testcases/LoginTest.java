@@ -14,6 +14,8 @@ import com.tutorialsninja.qa.pages.LoginPage;
 import com.tutorialsninja.qa.utilPackage.GeneralUtility;
 
 public class LoginTest extends Base {
+	
+	//PR Branch added from the main branch to sub branch
 	public WebDriver driver=null;
 	
 	@Test(dataProvider = "dataSupplier")
