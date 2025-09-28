@@ -87,6 +87,7 @@ WebDriver driver=null;;
 	}
 	@AfterMethod
 	public void closer() {
+		system.out.println("Webdriver browser should get closed post the execution of every TC !!");
 		System.out.println("After Method !!");
 		driver.quit();
 	}
