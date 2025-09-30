@@ -1,5 +1,7 @@
 package com.tutorialsninja.qa.testcases;
 
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -23,7 +25,7 @@ public class SearchTest extends Base {
 	
 	
 	@Test(priority = 1)
-	public void checkoutProcessWithoutLogin() {
+	public void checkoutProcessWithoutLogin() throws MalformedURLException  {
 		//Launch the Chrome browser 
 		//!!Please_initialize_openbrowserApplication_with_driver_Object!!
 		driver=openBrowserAndApplicationURL("firefox");
@@ -76,7 +78,7 @@ public class SearchTest extends Base {
 	}
 	
 	@Test(priority = 2)
-	public void checkOutProcessWithLogin() {
+	public void checkOutProcessWithLogin() throws MalformedURLException  {
 		//Launch the Browser
 		//Initialize the browser with driver reference
 		driver=openBrowserAndApplicationURL("firefox");
@@ -117,7 +119,7 @@ public class SearchTest extends Base {
 		String actualBillingAddressText = checkOutPage.billingAddressDisplay();
 		String expectedBillingAddressText="Step 2: Billing Details";
 		
-		//Verify the `Billing address displayes
+		//Verify the `Billing address displays
 		Assert.assertEquals(actualBillingAddressText, expectedBillingAddressText);
 		
 	}

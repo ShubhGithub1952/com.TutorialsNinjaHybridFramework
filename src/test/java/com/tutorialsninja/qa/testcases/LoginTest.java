@@ -1,12 +1,13 @@
 
 package com.tutorialsninja.qa.testcases;
 
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import com.tutorialsninja.qa.base.Base;
 import com.tutorialsninja.qa.pages.AccountPage;
 import com.tutorialsninja.qa.pages.HomePage;
@@ -21,7 +22,7 @@ public class LoginTest extends Base {
 	public WebDriver driver=null;
 	
 	@Test(dataProvider = "dataSupplier")
-	public void loginWithValidCredentials(String uName, String pwd) {
+	public void loginWithValidCredentials(String uName, String pwd) throws MalformedURLException {
 		
 		//Pass the Browser Name to launch application
 		//!!Please_initialize_openbrowserApplication_with_driver_Object!!

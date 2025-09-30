@@ -1,11 +1,12 @@
 package com.tutorialsninja.qa.testcases;
 
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import com.tutorialsninja.qa.base.Base;
 import com.tutorialsninja.qa.pages.HomePage;
 import com.tutorialsninja.qa.pages.RegisterPage;
@@ -16,10 +17,10 @@ public class RegisterTest extends Base {
 	public WebDriver driver=null;
 	
 	@Test(dataProvider = "dataSupplier")
-  public void registerToTutorialsNinja(String fName, String lName) {
+  public void registerToTutorialsNinja(String fName, String lName) throws MalformedURLException  {
 		
 	//!!Please_initialize_openbrowserApplication_with_driver_Object!!
-	  driver=openBrowserAndApplicationURL("chrome");
+	  driver=openBrowserAndApplicationURL("firefox");
 	  HomePage homePage = new HomePage(driver);
 	  
 	  //Click on My account drop menu
